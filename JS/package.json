@@ -1,0 +1,12 @@
+{
+  "name": "receber-dados",
+  "version": "1.0.0",
+  "description": "recebr dados do php",
+  "main": "dados.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eduardo",
+  "license": "ISC",
+  "type": "module"
+}

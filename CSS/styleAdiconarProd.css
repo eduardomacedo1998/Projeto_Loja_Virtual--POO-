@@ -1,0 +1,42 @@
+.botao_adicionar_prod{
+    background-color: greenyellow;
+    border: solid rgb(201, 201, 201);
+    width: 12%;
+}
+
+.botao_adicionar_prod img{
+    width: 100%;
+}
+
+.botao_adicionar_prod h3{
+    text-align: center;
+    background-color: greenyellow;
+    height: 100%;
+    font-weight: bold;
+    font-size: 3vb;
+}
+
+.botao_adicionar_prod:hover{
+    box-shadow: 5px 5px 5px black, 0px 0px 5px black;
+    transition: 0.4s;
+} 
+
+
+/*CSS DO FORM DE CADASTRO*/
+
+
+
+.divform{
+    background-color: azure;
+    border: solid silver;
+    width: 40%;
+    padding: 2%;
+    margin-top: 2%;
+    display: none;
+}
+
+#formCad{
+    
+    display: flex;
+    flex-direction: column;
+}
