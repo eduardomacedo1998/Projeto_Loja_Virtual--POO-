@@ -42,11 +42,22 @@
 }
 
 .divprod{
-    
-    display: inline-block;
-    flex-direction: row;
+    background-color: beige;
     margin: 2%;
 }
+
+.divprod h1,h2,p,img{
+    display: inline-block;
+    margin-right: 2%;
+    width: 200px;
+}
+
+.divprod img{
+    width: 15%;
+    height: 80px;
+}
+
+
 
 
 @media (max-width: 900px) { /*estilo css para telas menores*/
@@ -62,6 +73,28 @@
         margin: auto;
         margin-top: 10%;
     }
+
+    .divprod{
+        background-color: rgb(212, 22, 22);
+        width: 100%;
+        font-size: 2vb;
+        color: aliceblue;
+    }
+
+   
+
+    .divprod h1,h2,p,img{
+        display: block ;
+        margin-right: 2%;
+    }
+
+    
+
+    .divprod img{
+        width: 100%;
+        height: 30px;
+    }
+    
     
     .container {
       padding: 10px; /* Reduzir o espaço ao redor do conteúdo para telas pequenas */

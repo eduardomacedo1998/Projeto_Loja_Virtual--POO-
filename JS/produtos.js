@@ -49,22 +49,26 @@ export class Produtos{
             const divprod = document.createElement("div") // div que recebe preço, nome, descrição, id
             divprod.setAttribute("class", nomeclassdivprod )
 
-            const h2preco = document.createElement("h2")
-            h2preco.textContent = `Preco R$: ${item._preco}`
+           
 
             const descricao = document.createElement("p")
-            descricao.textContent = `${item._descricao}`
+            descricao.textContent = `${item.descricao}`
 
             const nomeprod = document.createElement("h1")
-            nomeprod.textContent = `${item._nome}`
+            nomeprod.textContent = `${item.nome}`
 
-            const quantidade = document.createElement("h2")
-            quantidade.textContent = `Quantidade: ${item._quantidade}`
+            const quantidade = document.createElement("img")
+            quantidade.setAttribute("src", "https://multilit.com.br/wp-content/uploads/2020/03/Produto-sem-foto.png")
 
+            const h2preco = document.createElement("h2")
+            h2preco.textContent = `Preco R$: ${item.preco}`
 
+            
             divprod.appendChild(nomeprod)
-            divprod.appendChild(h2preco)
             divprod.appendChild(descricao)
+            divprod.appendChild(h2preco)
+            divprod.appendChild(quantidade)
+
             
             divprincipal.appendChild(divprod)
 
