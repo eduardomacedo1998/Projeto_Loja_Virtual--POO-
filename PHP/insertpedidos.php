@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     // Verifica se os campos 'nome' e 'idade' foram enviados
-    if (isset($dadosRecebidos['nome']) && isset($dadosRecebidos['preco']) && isset($dadosRecebidos['quantidade'])&& isset($dadosRecebidos['descricao'])    ) {
+    if (isset($dadosRecebidos['nome']) && isset($dadosRecebidos['preco']) && isset($dadosRecebidos['quantidade'])&& isset($dadosRecebidos['descricao'])) {
         // Recupera o nome e a idade enviados
 
         $nome = $dadosRecebidos['nome'];
@@ -37,13 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          $resultado = $conn->query($sql);
 
 
-        // Exemplo: realizar algum cálculo
-        // $anoNascimento = date("Y") - $idade;
+        
 
 
-        // Exemplo: exibir os dados na página
-        echo "Nome: " . htmlspecialchars($nome) . "<br>";
-        echo "Idade: " . htmlspecialchars($idade) . "<br>";
+        
     } else {
         // Caso o campo 'nome' ou 'idade' não tenha sido enviado, exibe um erro
         http_response_code(400);

@@ -1,4 +1,4 @@
-import { Produtos } from "./produtos"
+import { Produtos } from "./produtos.js"
 
 
 

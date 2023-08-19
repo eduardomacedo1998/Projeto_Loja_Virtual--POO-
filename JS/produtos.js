@@ -23,8 +23,10 @@ export class Produtos{
             descricao: this._descricao
         }
 
+
+
         $.ajax({
-            url: './PHP/insertpedidos.php', // Substitua pelo nome do arquivo PHP que irá receber os dados
+            url: '../PHP/insertpedidos.php', // Substitua pelo nome do arquivo PHP que irá receber os dados
             type: 'POST', // Ou 'GET' se preferir uma solicitação GET
             data: dados, // Os dados a serem enviados para o servidor
             dataType: 'json',
