@@ -38,25 +38,13 @@ function botaocadastro(){ /*Função: exibir o form de cadastro ao clique do usu
  })
 
 
+
  const exibiritem = new Produtos()
 
  exibiritem.exibirprodutos("div","divprod")
 
 
- 
-
- 
-
- 
-
-
-    
-
-
-
-
-
-
+ exibiritem.exibirprodutos()
 
 botaocadastro()
 

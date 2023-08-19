@@ -35,6 +35,10 @@
     display: none;
 }
 
+.divform button {
+    margin: 2%;
+}
+
 #formCad{
     
     display: flex;
@@ -57,8 +61,13 @@
     height: 80px;
 }
 
-
-
+/* edição do formulario de editar produtos*/
+.formEditProd{
+    width: 400px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
 
 @media (max-width: 900px) { /*estilo css para telas menores*/
     
