@@ -4,7 +4,7 @@
 $servername = "localhost"; // Endereço do servidor MySQL (normalmente é localhost)
 $username = "root"; // Nome de usuário do MySQL
 $password = "";   // Senha do MySQL
-$dbname = "bancoprincipal"; // Nome do banco de dados que você deseja se conectar
+$dbname = "bancooficial"; // Nome do banco de dados que você deseja se conectar
 
 
 // Cria a conexão com o banco de dados usando a extensão mysqli
