@@ -27,14 +27,27 @@ function botaocadastro(){ /*Função: exibir o form de cadastro ao clique do usu
     const quantidade= document.getElementById("quantidade").value
     const descricao = document.getElementById("descricao").value
 
-    const metodocadastro = new Produtos(nome,preco,quantidade,descricao)
+    const metodocadastro = new Produtos()
 
 
-    metodocadastro.cadastrarprod()
+    metodocadastro.cadastrarprod(nome,preco,quantidade,descricao)
+    
 
 
 
  })
+
+
+ const exibiritem = new Produtos()
+
+ exibiritem.exibirprodutos("div","divprod")
+
+
+ 
+
+ 
+
+ 
 
 
     

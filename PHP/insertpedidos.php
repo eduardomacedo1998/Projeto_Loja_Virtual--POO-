@@ -36,18 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          $sql = "INSERT INTO produtos (_nome, _preco, _quantidade, _descricao) VALUES ('$nome', '$preco','$quantidade','$descricao')";
          $resultado = $conn->query($sql);
 
-
-        
-
-
-        
     } else {
         // Caso o campo 'nome' ou 'idade' não tenha sido enviado, exibe um erro
         http_response_code(400);
         echo "Requisição inválida. Certifique-se de enviar os campos 'nome' e 'idade' via POST.";
     }
-} else {
-    // Caso a requisição não seja do tipo POST, exibe um erro
-    http_response_code(400);
-    echo "Requisição inválida. Use o método POST para enviar os dados.";
-}
+} 

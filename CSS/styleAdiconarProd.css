@@ -41,6 +41,13 @@
     flex-direction: column;
 }
 
+.divprod{
+    
+    display: inline-block;
+    flex-direction: row;
+    margin: 2%;
+}
+
 
 @media (max-width: 900px) { /*estilo css para telas menores*/
     
