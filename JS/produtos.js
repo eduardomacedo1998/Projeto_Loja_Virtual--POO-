@@ -30,7 +30,7 @@ export class Produtos {
 
 
     // Função para exibir os produtos na página
-    exibirprodutos(iddiv, nomeclassdivprod) {
+    exibirprodutos(iddiv, nomeclassdivprod, endereco) {
 
         
         // Função interna para renderizar todos os produtos
@@ -120,7 +120,7 @@ export class Produtos {
 
         // Fazendo uma requisição AJAX para buscar os produtos no servidor
         $.ajax({
-            url: '../PHP/selectprodutos.php',
+            url: `${endereco}`,
             type: 'GET',
             dataType: 'json',
             success: function (data) {

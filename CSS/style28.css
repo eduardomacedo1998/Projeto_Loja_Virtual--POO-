@@ -20,6 +20,7 @@ body{
     height: 400px;
     border-radius: 25px;
     box-shadow: 5px 5px 5px azure;
+    padding: 2px;
 }
 
 .div-prod:hover{
@@ -36,6 +37,7 @@ body{
     background-color: #4ae00e;
     text-align: center;
     border-radius: 25px;
+    font-weight: lighter;
     
 }
 
@@ -91,3 +93,25 @@ body{
     margin-right: 1%;
     padding: 1%;
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 300px;
+    height: 40px;
+  }
+
+  .search-icon {
+    color: #999;
+  }
+
+  .search-input {
+    flex: 1;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 20px;
+  }
