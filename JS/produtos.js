@@ -35,6 +35,7 @@ export class Produtos {
         
         // Função interna para renderizar todos os produtos
         function renderizaprod(data) {
+            
             const divprincipal = document.getElementById(iddiv);
 
 
