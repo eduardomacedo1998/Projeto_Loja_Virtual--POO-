@@ -35,7 +35,7 @@ export class Produtos {
         
         // Função interna para renderizar todos os produtos
         function renderizaprod(data) {
-            
+
             const divprincipal = document.getElementById(iddiv);
 
 
@@ -66,13 +66,14 @@ export class Produtos {
 
                 // Criação do elemento para a imagem da quantidade
                 const quantidade = document.createElement('img');
-                quantidade.setAttribute('src', 'https://multilit.com.br/wp-content/uploads/2020/03/Produto-sem-foto.png');
+                quantidade.setAttribute('src', item.enderecoImagem);
 
                 // Criação do elemento para o preço
                 const h2preco = document.createElement('h2');
                 h2preco.textContent = 'Preço R$: ' + item.preco;
 
                 const btn_editar = document.createElement('button');
+                btn_editar.setAttribute("class", "button");
                 btn_editar.textContent = 'Editar';
                 btn_editar.addEventListener('click', () => {
                     // Aqui você pode implementar a lógica para capturar as informações do usuário para edição
@@ -96,6 +97,7 @@ export class Produtos {
             
                 // Botão de Excluir
                 const btn_excluir = document.createElement('button');
+                btn_excluir.setAttribute("class", "button");
                 btn_excluir.textContent = 'Excluir';
                 btn_excluir.addEventListener('click', () => {
                     // Aqui você pode implementar a lógica para excluir o produto com o ID correspondente (item.id)
@@ -103,12 +105,13 @@ export class Produtos {
 
                 // Adicionando os elementos criados à div do produto
                 divprod.appendChild(nomeprod);
+                divprod.appendChild(quantidade);
                 divprod.appendChild(id);
                 divprod.appendChild(btn_editar);
                 divprod.appendChild(btn_excluir);
                 divprod.appendChild(descricao);
                 divprod.appendChild(h2preco);
-                divprod.appendChild(quantidade);
+                
 
                 // Adicionando a div do produto à div principal
                 divprincipal.appendChild(divprod);

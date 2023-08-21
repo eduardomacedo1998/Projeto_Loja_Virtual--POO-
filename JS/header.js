@@ -32,6 +32,8 @@ export class Header{
         navegador.appendChild(nav1)
         navegador.appendChild(nav2)
         navegador.appendChild(nav3)
+
+        header.appendChild(navegador)
         
     }
 
