@@ -1,29 +1,14 @@
 <?php 
 
-// Dados de conexão com o banco de dados
-$servername = "localhost"; // Endereço do servidor MySQL (normalmente é localhost)
-$username = "root"; // Nome de usuário do MySQL
-$password = "";   // Senha do MySQL
-$dbname = "bancoprincipal"; // Nome do banco de dados que você deseja se conectar
+
+include_once "../php/class.php";
 
 
-// Cria a conexão com o banco de dados usando a extensão mysqli
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-$sql = "SELECT * FROM produtos";
-$result = $conn->query($sql);
+$selectdados = new Database("localhost", "root", "", "bancoprincipal");
 
 
-if ($result->num_rows > 0){
+
+$dados= $selectdados->select("produtos");
 
 
-    $data = array();
-    while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
-    }
-    echo json_encode($data);
-     
-}else{
-
-
-}
+echo json_encode($dados);
