@@ -18,9 +18,9 @@ function botaocadastro(){ /*Função: exibir o form de cadastro ao clique do usu
 }
 
 
- const btn = document.getElementById("btn-cad") // cadastro de produtos
+const btncadastro = document.getElementById("btn-cad") // cadastro de produtos
 
- btn.addEventListener("click", function(){
+ btncadastro.addEventListener("click", function(){
 
     const nome = document.getElementById("nome").value
     const preco = document.getElementById("preco").value
@@ -39,9 +39,15 @@ function botaocadastro(){ /*Função: exibir o form de cadastro ao clique do usu
 
 
 
+
+
+ 
+
+
+
  const exibiritem = new Produtos()
 
- exibiritem.exibirprodutos("div","divprod","../PHP/selectprodutos.php")
+ exibiritem.exibirprodutos("div","divprod","../PHP/selectprodutos.php") // div = onde sera renderizado os itens , divprod = classe , endereço
 
 
  exibiritem.exibirprodutos()
