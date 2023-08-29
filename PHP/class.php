@@ -71,6 +71,18 @@ class Database {
     }
 
 
+    public function delete($table, $id) { // função de update
+        $query = "DELETE FROM $table WHERE id = $id";
+       
+        if ($this->conn->query($query) === TRUE) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
     public function __destruct() {
         // Fecha a conexão com o banco de dados quando a instância da classe é destruída.
         $this->conn->close();
