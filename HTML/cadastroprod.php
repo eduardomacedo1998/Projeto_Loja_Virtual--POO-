@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <?php include_once "../PHP/delete.php" ?>
+
     <h1>Cadastro de produtos</h1>
 
     <div id="botao-adicionar-prod" class="botao_adicionar_prod">

@@ -99,8 +99,30 @@ export class Produtos {
                 const btn_excluir = document.createElement('button');
                 btn_excluir.setAttribute("class", "button");
                 btn_excluir.textContent = 'Excluir';
+
                 btn_excluir.addEventListener('click', () => {
-                    // Aqui você pode implementar a lógica para excluir o produto com o ID correspondente (item.id)
+
+
+                    
+                   const id = item.id
+
+                    $.ajax({
+                        url: '../PHP/delete.php',
+                        type: 'POST',
+                        data: id,
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log('Resposta do servidor:', data);
+                        },
+                        error: function (xhr, status, error) {
+                            console.log('Erro na requisição AJAX:', error);
+                        },
+                    });
+                    
+                   
+
+
+
                 });
 
                 // Adicionando os elementos criados à div do produto
