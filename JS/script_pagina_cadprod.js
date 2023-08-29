@@ -18,7 +18,7 @@ function botaocadastro(){ /*Função: exibir o form de cadastro ao clique do usu
 }
 
 
- const btn = document.getElementById("btn-cad")
+ const btn = document.getElementById("btn-cad") // cadastro de produtos
 
  btn.addEventListener("click", function(){
 

@@ -8,7 +8,7 @@ export class Produtos {
         const dados = {
             nome: nome,
             preco: preco,
-            quantidade: quantidade,
+            estoque: quantidade,
             descricao: descricao,
         };
 
