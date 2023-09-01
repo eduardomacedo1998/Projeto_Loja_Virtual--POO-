@@ -38,11 +38,7 @@ const btncadastro = document.getElementById("btn-cad") // cadastro de produtos
  })
 
 
-
-
-
- 
-
+ // CHAMADA DE MOTODOS E FUNÇÕES 
 
 
  const exibiritem = new Produtos()

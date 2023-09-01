@@ -3,26 +3,25 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verifica se a requisição é do tipo POST
 
-    include_once './class.php';
+    include './class.php';
 
 
     // Acessa os dados enviados via POST
-    $id= $_POST;
+    $id= $_POST['id'];
 
+    if($id){
 
-
-       
-       $delete = new Database("localhost", "root", "", "bancoprincipal");
+         
+       $delete = new Database("localhost", "root", " ", "bancoprincipal");
 
        $delete ->delete("produtos",$id);
+
+    }
+
+
+      
        
        
         
 
-    } else {
-        // Caso o campo 'nome' ou 'idade' não tenha sido enviado, exibe um erro
-        http_response_code(400);
-
-        echo "erro no processo";
-        
     }

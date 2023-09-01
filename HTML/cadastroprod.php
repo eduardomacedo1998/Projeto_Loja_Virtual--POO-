@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/styleAdiconar.css">
+    <link rel="stylesheet" href="../CSS/styleAdiconar56.css">
 </head>
 <body>
 
-    <?php include_once "../PHP/delete.php" ?>
+    <?php include_once "../PHP/editprod.php" ?>
 
     <h1>Cadastro de produtos</h1>
 
@@ -49,7 +49,10 @@
 
     <div id="div">
 
+    
+
         <form action="" id="formEditProd" class="formEditProd">
+        <h3>editar produtos</h3>
             <label for="nomeEdit">Nome</label>
             <input type="text" id="nomeEdit" name="nome" placeholder="seu nome aqui " required>
 
@@ -61,6 +64,8 @@
 
             <label for="descricaoEdite">descrição</label>
             <input type="text" id="descricaoEdit" name="descricao" placeholder="descrição do produto" required>
+
+            
 
         </form>
 

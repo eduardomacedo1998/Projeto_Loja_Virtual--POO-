@@ -44,6 +44,7 @@ export class Produtos {
             const preco = document.getElementById("precoEdit")
             const quantidadeEdit= document.getElementById("quantidadeEdit")
             const descricaoEdit = document.getElementById("descricaoEdit")
+            const formeditprod = document.getElementById("formEditProd") // buscando o formulario
             //  dados necessarios para editar um produto, tudo que estiver aqui serve para editar id = formeditprod
 
 
@@ -74,11 +75,33 @@ export class Produtos {
 
                 const btn_editar = document.createElement('button');
                 btn_editar.setAttribute("class", "button");
+                btn_editar.setAttribute("id", "btneditarprod");
                 btn_editar.textContent = 'Editar';
-                btn_editar.addEventListener('click', () => {
-                    // Aqui você pode implementar a lógica para capturar as informações do usuário para edição
+                btn_editar.addEventListener('click', () => {   // Aqui você pode implementar a lógica para capturar as informações do usuário para edição
+                  
                     
 
+                    formeditprod.style.display = "flex"
+
+
+                    
+
+                    formeditprod.appendChild(btn_editar_finalizar);
+
+                    
+            
+                    // Agora você tem as informações que o usuário deseja editar (novadescricao e novopreco)
+                    // e também o ID do produto (item.id)
+                    // Faça o que for necessário com esses dados, como atualizar os valores no servidor, etc.
+                });
+
+                const btn_editar_finalizar = document.createElement('button');
+                btn_editar_finalizar.textContent = "finalizar edição"
+                btn_editar_finalizar.type = "button"
+                btn_editar_finalizar.addEventListener("click", ()=>{
+
+
+                    
 
                     const dadosedit = {
                         id: item.id,
@@ -89,11 +112,21 @@ export class Produtos {
                     }
 
                     console.log(dadosedit)
-            
-                    // Agora você tem as informações que o usuário deseja editar (novadescricao e novopreco)
-                    // e também o ID do produto (item.id)
-                    // Faça o que for necessário com esses dados, como atualizar os valores no servidor, etc.
-                });
+
+                    $.ajax({
+                        url: '../PHP/editprod.php',
+                        type: 'POST',
+                        data: dadosedit,
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log('Resposta do servidor:', data);
+                        },
+                        error: function (xhr, status, error) {
+                            console.log('Erro na requisição AJAX:', error);
+                        },
+                    });
+
+                })
             
                 // Botão de Excluir
                 const btn_excluir = document.createElement('button');
@@ -104,7 +137,13 @@ export class Produtos {
 
 
                     
-                   const id = item.id
+                   const id = {
+
+                      id : item.id
+
+                   } 
+
+                   alert("produto excluido com Sucesso !" + item.nome)
 
                     $.ajax({
                         url: '../PHP/delete.php',
@@ -137,6 +176,7 @@ export class Produtos {
 
                 // Adicionando a div do produto à div principal
                 divprincipal.appendChild(divprod);
+                
             });
         }
 
