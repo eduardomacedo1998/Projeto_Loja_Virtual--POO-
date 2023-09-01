@@ -60,8 +60,15 @@ class Database {
     // Métodos semelhantes para delete e update, fazendo operações de DELETE e UPDATE no banco de dados.
 
 
-    public function updateVerificationStatus($table, $userId, $newVerificationStatus) {
-        $query = "UPDATE $table SET verificacao = '$newVerificationStatus' WHERE id = $userId";
+    public function updateprod($table, $prodId, $newnome,$newpreco,$newdescricao,$newestoque) {
+        $query = "UPDATE $table 
+        
+        SET 
+        nome = '$newnome',
+        descricao = '$newdescricao', 
+        preco = '$newpreco',
+        estoque = '$newestoque'
+        WHERE id = $prodId";
        
         if ($this->conn->query($query) === TRUE) {
             return true;

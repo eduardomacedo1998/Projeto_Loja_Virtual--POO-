@@ -56,13 +56,13 @@
             <label for="nomeEdit">Nome</label>
             <input type="text" id="nomeEdit" name="nome" placeholder="seu nome aqui " required>
 
-            <label for="precoEdit">Preço:</label>
+            <label for="precoEdit">descrição:</label>
             <input type="text" id="precoEdit" name="preco" placeholder="valor de venda" required>
 
-            <label for="quantidadeEdit">quantidade</label>
+            <label for="quantidadeEdit">preco</label>
             <input type="text" id="quantidadeEdit" name="quantidade" placeholder="quantidade do estoque" required>
 
-            <label for="descricaoEdite">descrição</label>
+            <label for="descricaoEdite">estoque</label>
             <input type="text" id="descricaoEdit" name="descricao" placeholder="descrição do produto" required>
 
             
